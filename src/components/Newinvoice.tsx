@@ -15,7 +15,8 @@ const Newinvoice: React.FC<Props> = ({invoice,setInvoice,invoices,setInvoices}) 
  const formSubmit = (e:React.FormEvent<HTMLFormElement>)=>{
    e.preventDefault();   
    setInvoices(invoices)
-   console.log(invoices ,"invoices") 
+   console.log(invoices ,"invoices")  
+   console.log(invoice ,"invoice") 
  } 
  
 
@@ -24,7 +25,7 @@ const Newinvoice: React.FC<Props> = ({invoice,setInvoice,invoices,setInvoices}) 
     setInvoices((state)=>{
         const name = e.target.name ;
         const value = e.target.value ;
-       return{...state , [name]:value}; 
+       return{...state , [name]:value};
      
     }
   
