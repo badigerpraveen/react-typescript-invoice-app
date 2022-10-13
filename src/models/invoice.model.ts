@@ -1,13 +1,18 @@
 
-export interface newInvoice {
-    streetAddress : string,
-    city:string,
-    postcode:number,
-    country:string,
-    clientName:string,
-    clientEmail:string,
-    clientStreetAddress:string,
-    invoiceDate :string,
-    paymentTerms :string,
-    sescription:string,
+export   interface newInvoice { 
+    
+    streetAddress ?: string ,
+    city?:string,
+     postcode?:number,
+     country?:string,
+     clientName?:string,
+     clientEmail?:string,
+     clientStreetAddress?:string,
+     clientcity?:string,
+     clientpostcode?:number,
+     clientcountry?:string,
+     invoiceDate ?:string,
+     paymentTerms ?:string,
+     description?:string,
 }
+
