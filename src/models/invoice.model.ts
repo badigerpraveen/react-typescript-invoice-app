@@ -1,6 +1,6 @@
 
 export   interface newInvoice { 
-    
+    invoiceId?:number,
     streetAddress ?: string ,
     city?:string,
      postcode?:number,
@@ -13,6 +13,12 @@ export   interface newInvoice {
      clientcountry?:string,
      invoiceDate ?:string,
      paymentTerms ?:string,
+      itemlist:{
+        itemname?:string,
+        itemqty?:number,
+        itemprice?:number,
+       }, 
+   // itemlist?:string,
      description?:string,
 }
 

@@ -10,7 +10,26 @@ import Newinvoice from "./Newinvoice";
 const Invoice: React.FC = () => {
    
  
-   const [invoice, setInvoice] = useState<string[]>([]); 
+   const [invoice, setInvoice] = useState<any[]>([
+    { invoiceId:1,
+     streetAddress : "" ,
+    city:"",
+     postcode:0,
+     country:"",
+     clientName:"",
+     clientEmail:"",
+     clientStreetAddress:"",
+     clientcity:"",
+     clientpostcode:"",
+     clientcountry:"",
+     invoiceDate :"",
+     paymentTerms :"",
+     itemlist:{
+       itemname:"",
+       itemqty:"",
+       itemprice:"",
+      },
+     description:""}]); 
    const [invoices, setInvoices] = useState<newInvoice[]>([]);
    
    return (
