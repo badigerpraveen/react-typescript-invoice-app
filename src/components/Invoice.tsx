@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Sidenavbar from "./Sidenavbar";
 import { AiFillPlusCircle ,AiOutlineRight } from "react-icons/ai";
-import Card from 'react-bootstrap/Card'; 
 import {Container ,Row } from 'react-bootstrap';
 import { newInvoice } from "../models/invoice.model";
 import Newinvoice from "./Newinvoice";
@@ -9,20 +8,29 @@ import Newinvoice from "./Newinvoice";
 
 
 const Invoice: React.FC = () => {
-    const [invoice, setInvoice] = useState<string[]>([]);
-   const [invoices, setInvoices] = useState<newInvoice[]>([{
-    streetAddress :"",
-        city:"",
-        postcode:0,
-         country:"",
-        clientName:"",
-        clientEmail:"",
-        clientStreetAddress:"",
-        invoiceDate :"",
-        paymentTerms :"",
-        sescription:"",
-   }]);
    
+ 
+   const [invoice, setInvoice] = useState<any[]>([
+    { invoiceId:1,
+     streetAddress : "" ,
+    city:"",
+     postcode:0,
+     country:"",
+     clientName:"",
+     clientEmail:"",
+     clientStreetAddress:"",
+     clientcity:"",
+     clientpostcode:"",
+     clientcountry:"",
+     invoiceDate :"",
+     paymentTerms :"",
+     itemlist:{
+       itemname:"",
+       itemqty:"",
+       itemprice:"",
+      },
+     description:""}]); 
+   const [invoices, setInvoices] = useState<newInvoice[]>([]);
    
    return (
         <>
